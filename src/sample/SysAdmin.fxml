@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="448.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SysAdminController">
+   <children>
+      <TextField fx:id="filterField" layoutX="20.0" layoutY="43.0" />
+      <TableView fx:id="userTable" layoutX="20.0" layoutY="75.0" prefHeight="345.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="usernameCol" prefWidth="75.0" text="Username" />
+          <TableColumn fx:id="passCol" prefWidth="75.0" text="Password" />
+            <TableColumn fx:id="fnameCol" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="lnameCol" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
+        </columns>
+      </TableView>
+      <MenuBar fx:id="menu" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newAccount" mnemonicParsing="false" onAction="#OpenCreateAccountScene" text="Create New Account" />
+                  <MenuItem mnemonicParsing="false" onAction="#resetPasswords" text="Reset Passwords" />
+                <MenuItem fx:id="close" mnemonicParsing="false" onAction="#openLoginScene" text="Log Out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#deleteUser" text="Delete Selected User(s)" />
+                  <MenuItem mnemonicParsing="false" onAction="#openEditAccount" text="Edit Account Info" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="344.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshUsers" text="Refresh" />
+   </children>
+</AnchorPane>

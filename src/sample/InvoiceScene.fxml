@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="455.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InvoiceSceneController">
+   <children>
+      <DatePicker fx:id="startdate" layoutX="22.0" layoutY="46.0" />
+      <DatePicker fx:id="enddate" layoutX="273.0" layoutY="46.0" />
+      <Label layoutX="82.0" layoutY="21.0" text="Start Date" />
+      <Label layoutX="336.0" layoutY="21.0" text="End Date" />
+      <TextArea fx:id="invoiceDisplay" layoutX="22.0" layoutY="91.0" prefHeight="294.0" prefWidth="528.0" />
+      <Button fx:id="submit" layoutX="576.0" layoutY="398.0" mnemonicParsing="false" onAction="#close" text="Submit" />
+      <ChoiceBox fx:id="choiceID" layoutX="501.0" layoutY="46.0" prefWidth="150.0" />
+      <Button fx:id="display" layoutX="496.0" layoutY="398.0" mnemonicParsing="false" onAction="#displayInvoices" text="Display" />
+      <Button fx:id="refresh" layoutX="420.0" layoutY="398.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+   </children>
+</AnchorPane>

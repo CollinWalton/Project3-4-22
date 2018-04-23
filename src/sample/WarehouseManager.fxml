@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WarehouseManagerController">
+   <children>
+      <TableView fx:id="bpTable" layoutX="53.0" layoutY="93.0" prefHeight="318.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="whCol" prefWidth="75.0" text="Warehouse" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="numCol" prefWidth="75.0" text="Number" />
+            <TableColumn fx:id="listCol" prefWidth="75.0" text="List Price" />
+            <TableColumn fx:id="saleCol" prefWidth="75.0" text="Sale Price" />
+            <TableColumn fx:id="onSaleCol" prefWidth="75.0" text="On Sale?" />
+            <TableColumn fx:id="qtyCol" prefWidth="75.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <MenuBar fx:id="menu" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#updateInventory" text="Update Inventory" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Log Out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openEditAccount" text="Change Account Info" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="filterField" layoutX="53.0" layoutY="61.0" />
+   </children>
+</AnchorPane>

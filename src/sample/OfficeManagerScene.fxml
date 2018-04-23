@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OfficeManagerController">
+   <children>
+      <TableView fx:id="bpTable" layoutX="23.0" layoutY="68.0" prefHeight="310.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="whCol" prefWidth="75.0" text="Warehouse" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="numCol" prefWidth="75.0" text="Number" />
+            <TableColumn fx:id="listCol" prefWidth="75.0" text="List Price" />
+            <TableColumn fx:id="saleCol" prefWidth="75.0" text="Sale Price" />
+            <TableColumn fx:id="qtyCol" prefWidth="75.0" text="Quantitiy" />
+            <TableColumn fx:id="onSaleCol" prefWidth="75.0" text="OnSale" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="23.0" layoutY="33.0" />
+      <MenuBar fx:id="menu" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Create Payroll" />
+                  <MenuItem fx:id="invoiceItem" mnemonicParsing="false" onAction="#invoice" text="View Invoices" />
+                  <MenuItem mnemonicParsing="false" text="Order Inventory" />
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Log Out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openEditAccount" text="Change Account Info" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
