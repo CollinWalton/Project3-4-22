@@ -1,6 +1,5 @@
 package sample;
 
-import sample.OfficeManager;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -9,7 +8,6 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Controller {
@@ -22,7 +20,6 @@ public class Controller {
     public static BigHouse bwh =  new BigHouse();
     public static LoginAccount currentUser = null;
     public static LoginAccount sysadmin = new SystemAdmin("sysadmin", "12345");
-    public static ArrayList<Invoice> invoices = new ArrayList<Invoice>();
 
     //SCENES
     private Scene warehouseManagerScene;
@@ -50,6 +47,7 @@ public class Controller {
             }
             if(userBase.getUserMap().get(username) instanceof SalesAssociate) {
                 primaryStage.setScene(salesAssociate);
+
             }
             if(userBase.getUserMap().get(username) instanceof OfficeManager) {
                 primaryStage.setScene(officeManagerScene);

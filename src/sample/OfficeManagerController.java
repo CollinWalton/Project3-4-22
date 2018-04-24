@@ -4,19 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.util.Date;
-
 import static sample.Controller.bwh;
 import static sample.Controller.userBase;
 
@@ -44,11 +39,11 @@ public class OfficeManagerController {
 
     
     
-    public void invoice()
-    {
+    public void invoice() {
     	Stage primaryStage = (Stage) (menu).getScene().getWindow();
 		primaryStage.setScene(invoiceScene);
     }
+
     public void displayInvoices() {
 
 

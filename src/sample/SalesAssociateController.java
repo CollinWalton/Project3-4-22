@@ -1,6 +1,5 @@
 package sample;
 
-//import com.sun.jdi.IntegerValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -157,7 +156,7 @@ public class SalesAssociateController {
     public void sellParts() {
 
         Date date = new Date();
-        String customer = "";
+        String customer = null;
         ArrayList<BikePart> bpal = new ArrayList<BikePart>();
 
         ObservableList<BikePart> parts = bpTable.getSelectionModel().getSelectedItems();

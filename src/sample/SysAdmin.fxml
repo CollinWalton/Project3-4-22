@@ -9,16 +9,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="448.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SysAdminController">
+<AnchorPane prefHeight="451.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SysAdminController">
    <children>
       <TextField fx:id="filterField" layoutX="20.0" layoutY="43.0" />
-      <TableView fx:id="userTable" layoutX="20.0" layoutY="75.0" prefHeight="345.0" prefWidth="376.0">
+      <TableView fx:id="userTable" layoutX="20.0" layoutY="75.0" prefHeight="345.0" prefWidth="466.0">
         <columns>
           <TableColumn fx:id="usernameCol" prefWidth="75.0" text="Username" />
           <TableColumn fx:id="passCol" prefWidth="75.0" text="Password" />
             <TableColumn fx:id="fnameCol" prefWidth="75.0" text="First Name" />
             <TableColumn fx:id="lnameCol" prefWidth="75.0" text="Last Name" />
             <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="typeCol" prefWidth="90.0" text="Account Type" />
         </columns>
       </TableView>
       <MenuBar fx:id="menu" layoutY="2.0">

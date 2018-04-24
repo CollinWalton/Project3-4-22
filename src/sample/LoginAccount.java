@@ -62,7 +62,7 @@ public abstract class LoginAccount implements Serializable {
     public StringProperty fNameProperty () { SimpleStringProperty property = new SimpleStringProperty(this.firstName); return property; }
     public StringProperty lNameProperty () { SimpleStringProperty property = new SimpleStringProperty(this.lastName); return property; }
     public StringProperty emailProperty () { SimpleStringProperty property = new SimpleStringProperty(this.email); return property; }
-    public StringProperty typeProperty () { SimpleStringProperty property = new SimpleStringProperty(this.accountType); return property; }
+    public StringProperty typeProperty () { SimpleStringProperty property = new SimpleStringProperty(this.getAccountType()); return property; }
 
     //overridden equals method for comparison
 	public boolean equals(LoginAccount x) {

@@ -22,6 +22,7 @@ public class SysAdminController {
     public TableColumn <LoginAccount, String>  fnameCol;
     public TableColumn <LoginAccount, String>  lnameCol;
     public TableColumn <LoginAccount, String>  emailCol;
+    public TableColumn <LoginAccount, String> typeCol;
     public TableView <LoginAccount> userTable;
 
     public static LoginAccount selectedUser = null;
@@ -121,6 +122,7 @@ public class SysAdminController {
         fnameCol.setCellValueFactory(cellData -> cellData.getValue().fNameProperty());
         lnameCol.setCellValueFactory(cellData -> cellData.getValue().lNameProperty());
         emailCol.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
+        typeCol.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
 
         FilteredList<LoginAccount> filteredData = new FilteredList<>(masterData, p -> true);
 
