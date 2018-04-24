@@ -26,7 +26,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Create Payroll" />
+                  <MenuItem mnemonicParsing="false" onAction="#payroll" text="Create Payroll" />
                   <MenuItem fx:id="invoiceItem" mnemonicParsing="false" onAction="#invoice" text="View Invoices" />
                   <MenuItem mnemonicParsing="false" text="Order Inventory" />
               <MenuItem mnemonicParsing="false" onAction="#close" text="Log Out" />

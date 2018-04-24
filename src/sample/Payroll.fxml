@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="268.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PayrollController">
+   <children>
+      <Button fx:id="createPayroll" layoutX="111.0" layoutY="172.0" mnemonicParsing="false" onAction="#createPayroll" text="Submit" />
+      <TextArea fx:id="payrollBox" layoutX="273.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="choiceID" layoutX="63.0" layoutY="134.0" prefWidth="150.0" />
+      <DatePicker fx:id="startdate" layoutX="51.0" layoutY="47.0" promptText="Start Date" />
+      <DatePicker fx:id="enddate" layoutX="51.0" layoutY="91.0" promptText="End Date" />
+      <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="54.0" text="Return" />
+   </children>
+</AnchorPane>

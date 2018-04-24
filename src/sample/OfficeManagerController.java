@@ -32,6 +32,7 @@ public class OfficeManagerController {
     private Scene editAccountScene;
     private Scene invoiceScene;
 	public MenuItem invoiceItem;
+    private Scene payrollScene;
 
     public void setLoginScene(Scene loginScene) { this.loginScene = loginScene; }
     public void setEditAccountScene(Scene editAccountScene) { this.editAccountScene = editAccountScene; }
@@ -131,7 +132,14 @@ public class OfficeManagerController {
         Stage primaryStage = (Stage) (menu).getScene().getWindow();
         primaryStage.setScene(editAccountScene);
     }
+    public void payroll() {
+        Stage primaryStage = (Stage) (menu).getScene().getWindow();
+        primaryStage.setScene(payrollScene);
+    }
 
 
 
+    public void setPayrollScene(Scene payrollScene) {
+        this.payrollScene = payrollScene;
+    }
 }
